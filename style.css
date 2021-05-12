@@ -1,0 +1,153 @@
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --laranja: hsl(31, 77%, 52%);
+    --ciano:  hsl(184, 100%, 22%);
+    --cianoEscuro: hsl(179, 100%, 13%);
+    --cinzaClaro: hsl(0, 0%, 95%);
+    --cinzaParagrafo:  hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinzaClaro);
+    
+}
+
+.main-card {
+    display: flex;
+    width: 60rem;
+    height: 30rem;
+    
+}
+
+.col {
+    width: 33%;
+    height: 100%;
+    color:var(--cinzaClaro);
+    padding: 0px 30px 0 40px;
+}
+
+.col h1 {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col p {
+    color: var(--cinzaParagrafo);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    margin:  0 40px 80px 0;
+    line-height: 1.5rem;
+    font-weight: lighter;
+}
+
+.col img {
+    padding: 40px 0;
+}
+
+.col a {
+   
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: capitalize;
+    background-color: var(--cinzaClaro);
+    border: 2px solid var(--cinzaClaro);
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    transition: 0.5s;
+    
+}
+
+.col a:hover {
+   
+    
+    background-color: transparent;
+    color: var(--cinzaClaro);
+    
+    
+}
+
+.col-1 {
+    background-color: var(--laranja);
+    border-radius:  7px 0 0  7px;
+}
+
+.col-1 a {
+    color: var(--laranja) ;
+}
+
+.col-2 a {
+    color: var(--ciano) ;
+}
+
+.col-3 a {
+    color: var(--cianoEscuro) ;
+}
+
+.col-2 {
+    background-color: var(--ciano);
+    
+}
+
+.col-3 {
+    background-color: var(--cianoEscuro);
+    border-radius:   0 7px 7px 0  ;
+    
+}
+
+.attribution {
+    
+    height: 30px;
+    
+    background-color: var(--cinzaClaro);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+@media  (max-width: 800px) {
+    
+    #container {
+        align-items: flex-start;
+        height: 160vh;
+        padding-bottom: 10px;
+    }
+    .main-card {
+        flex-direction: column;
+    
+        
+    }
+    .col {
+        width: fit-content;
+        margin: 0 30px;
+        padding-bottom: 60px;
+    }
+
+    .col-1 {
+        margin-top: 10px;
+        border-radius:  7px 7px 0  0;
+    }
+    .col-3 {
+        border-radius:  0px 0px 7px  7px;
+    }
+
+    .col p {
+       
+        margin:  0 40px 50px 0;
+        
+    }
+  }
